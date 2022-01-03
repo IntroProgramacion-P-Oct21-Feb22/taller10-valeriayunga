@@ -22,14 +22,19 @@ public class Problema06 {
         {"Emma Escobar", "Lori Flores"},
         {"Steven West", "Toni Martin"}
         };
-
+        String mensaje ="";
         for (int i = 0; i < estudiantes.length; i++) {
             for (int j = 0; j < estudiantes[i].length; j++) {
-
-                char valor = estudiantes[i][j].charAt(11);
                 
-                 System.out.println(estudiantes[i][j]);
+                 String valor = estudiantes[i][j];
+                 int longitud=valor.length();
+                 
+                 if (longitud==11)
+                     mensaje = String.format("%s%s\n"
+                             ,mensaje,estudiantes[i][j]);
+                 
             }
         }
+        System.out.printf("%s",mensaje);
     }
 }

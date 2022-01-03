@@ -25,7 +25,7 @@ public class Problema05 {
         {"Emma Escobar", "Lori Flores"},
         {"Steven West", "Toni Martin"}
         };
-        
+        String mensaje="";
         
 
         for (int i = 0; i < estudiantes.length; i++) {
@@ -36,10 +36,12 @@ public class Problema05 {
                     case 'S':
                     case 'P':
                     case 'T':
-                        System.out.println(estudiantes[i][j]);
+                        mensaje=String.format("%s%s\n"
+                                ,mensaje,estudiantes[i][j]);
                         break;
                 }
             }
         }
+        System.out.printf("%s", mensaje);
     }
 }
